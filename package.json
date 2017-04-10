@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toniolOK/jtoniolo.git"
+    "url": "git@github.com:toniolOK/jtoniolo.git"
   },
   "author": "Jose Toniolo",
   "license": "GPL-3.0",
