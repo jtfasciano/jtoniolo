@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+<% include ../partials/navbar %>
+
+<div class="ui main text raised container">
+  <div class="ui top attached segment">
+    <h1 class="ui clearing left floated header">Create a new gallery!</h1>
+
+
+    <form name="newGallery" class="ui form" action="/galleries" method="POST">
+
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name">
+      </div>
+
+      <div class="field">
+        <label>Type</label>
+        <select name="type" class="ui fluid dropdown">
+          <option value="">Type</option>
+          <option value="Photo">Photo</option>
+          <option value="Video">Video</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Thumbnail</label>
+        <input type="text" name="image" placeholder="Image URL">
+      </div>
+
+      <div class="field">
+        <label>Description</label>
+        <textarea type="text" name="description" placeholder="Description"></textarea>
+      </div>
+
+      <button class="ui button" type="submit">Submit</button>
+      <a class="ui button" href="/galleries">Cancel</a>
+    </form>
+  </div>
+</div>
+
+<% include ../partials/footer %>

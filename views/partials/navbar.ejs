@@ -1,0 +1,36 @@
+    </head>
+    <body>
+
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <a href="/" class="header item" ><i class="large home icon"></i></a>
+            <a href="/galleries" class="item"></i>Gallery</a>
+            <a href="/edu" class="item"></i>Edu</a>
+            <div class="right menu">
+              <% if(!currentUser){ %>
+                <a class="item" href="/login">Login</a>
+                <a class="item" href="/register">Sign Up</a>
+              <%} else { %>
+                <a class="item" href="/logout">Hi <%= currentUser.username %>!  <i class="sign out icon"></i></a>
+              <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div id="alert-container" class="ui container">
+        <% if(error && error.length > 0){ %>
+          <div class="ui negative message" role="alert">
+            <i class="close icon"></i>
+            <div class="header">Ooops....</div>
+            <p><%= error %></p>
+          </div>
+        <% } %>
+
+        <% if(success && success.length > 0){ %>
+            <div class="ui positive message" role="alert">
+              <i class="close icon"></i>
+              <div class="header">Ooops....</div>
+              <p><%= success %></p>
+            </div>
+        <% } %>
+    </div>

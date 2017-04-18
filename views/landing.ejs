@@ -1,1 +1,43 @@
-<h1> Hello World! </h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>t.OK</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+
+    <div id="landing-header">
+   		<h1>Welcome!</h1>
+      <div id="landing-buttons" class="ui buttons">
+        <a class="ui inverted button" href="#">Weke</a>
+        <a class="ui inverted button" href="#">Polligraph</a>
+        <a class="ui inverted button" href="#">Finance</a>
+        <a class="ui inverted button" href="#">Edu</a>
+        <a class="ui inverted button" href="/galleries">Gallery</a>
+      </div>
+    </div>
+
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<% include partials/footer %>

@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+<% include ../partials/navbar %>
+
+<div class="ui raised text container">
+  <div class="ui grid">
+    <div class="two column row">
+      <div class="column">
+        <div id="appAlertClose" class="ui header">The Gallery!</div>
+      </div>
+      <div class="right aligned column">
+        <div class="ui large header"><a href="/galleries/new"><i class="plus icon"></i></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="ui top attached segment">
+    <div class="ui divided items">
+      <% galleries.forEach(function(gallery){ %>
+        <div class="item">
+            <div class="image">
+                <img src="<%= gallery.image %>">
+            </div>
+            <div class="content">
+                <a class="header" href="/galleries/<%= gallery._id %>"><%= gallery.name %></a>
+                <div class="meta">
+                    <span>Created: <%= gallery.created.toDateString() %></span>
+                </div>
+                <div class="description">
+                    <p><%- gallery.description.substring(0, 150) %>...</p>
+                </div>
+                <div class="extra">
+                    <a class="ui floated basic black button" href="/galleries/<%= gallery._id %>">
+                        Enter Gallery
+                        <i class="right chevron icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>
